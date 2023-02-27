@@ -1,0 +1,24 @@
+.headerNav{
+   background-color: #9d3dc8;
+}
+h1{
+   font-family: 'Great Vibes', cursive;
+}
+
+.react-bubbly-transitions__bubbly-link{
+   font-family: 'Inter', sans-serif;
+   font-weight: 600;
+   letter-spacing: 1px
+}
+.menu{
+   display: none;
+}
+
+@media screen and (max-width: 605px) {
+   .navbar{
+      display: none;
+   }
+   .menu{
+      display: inline-block;
+   }
+ }
