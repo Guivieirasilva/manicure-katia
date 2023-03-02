@@ -2,7 +2,11 @@ import { BubblyLink } from "react-bubbly-transitions";
 import "./styles.css";
 import Menu from "../../assets/menu.svg";
 
-export default function Nav() {
+export interface PropsNavMenu {
+  MenuIsVisible?: any;
+}
+
+export default function Nav({ MenuIsVisible }: PropsNavMenu) {
   return (
     <header className="headerNav">
       <BubblyLink to="/">
@@ -17,10 +21,15 @@ export default function Nav() {
         <BubblyLink to="Contact">Contato</BubblyLink>
       </nav>
       <button
-        className="menu"
-        style={{ backgroundColor: "#9d3dc8", border: "none" }}
+        className="menu animate-in"
+        onClick={MenuIsVisible}
+        style={{
+          backgroundColor: "transparent",
+          border: "none",
+          animationDelay: "700ms",
+        }}
       >
-        <img width={32}  src={Menu} />
+        <img width={32} src={Menu} />
       </button>
     </header>
   );

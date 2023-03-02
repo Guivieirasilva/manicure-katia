@@ -8,11 +8,20 @@ import Home from "./pages/Home/Index";
 
 import "./App.css";
 import Nav from "./components/Nav/Index";
+import { useState } from "react";
+import { NavMenuMobile } from "./components/NavMenuMobile/Index";
 
 function App() {
+  const [menuIsVisible, setMenuIsVisible] = useState(false);
+
   return (
     <BrowserRouter>
-    <Nav/>
+      <NavMenuMobile
+        menuIsVisible={menuIsVisible}
+        setMenuIsVisible={setMenuIsVisible}
+      />
+      <Nav MenuIsVisible={() => setMenuIsVisible(true)} />
+
       <BubblyContainer />
       <Routes>
         <Route path="/" element={<Outlet />} />
@@ -22,6 +31,7 @@ function App() {
         <Route path="Contact" element={<Contact />} />
         <Route path="*" element={<>NOT FOUND</>} />
       </Routes>
+
     </BrowserRouter>
   );
 }
