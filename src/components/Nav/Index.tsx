@@ -14,7 +14,11 @@ export default function Nav({ MenuIsVisible }: PropsNavMenu) {
       </BubblyLink>
       <nav
         className="animate-in navbar"
-        style={{ animationDelay: "700ms", fontWeight: 600 }}
+        style={{
+          animationDelay: "700ms",
+          fontWeight: 600,
+          paddingRight: "20px",
+        }}
       >
         <BubblyLink to="About">Sobre</BubblyLink>
         <BubblyLink to="Works">Trabalhos</BubblyLink>

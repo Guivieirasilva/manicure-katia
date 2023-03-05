@@ -9,6 +9,7 @@
 
   --primary: #9d3dc8;
   --textColor: #ffffff;
+  --primaryDark: #8e38b5;
 }
 
 body {
@@ -36,9 +37,13 @@ h1 {
 }
 
 .react-bubbly-transitions__bubbly-link {
-  font-family: "Inter", sans-serif;
+  font-family: "Libre Baskerville", serif;
   font-weight: 600;
   letter-spacing: 1px;
+  transition-duration: 0.4s;
+}
+.react-bubbly-transitions__bubbly-link:hover {
+  transform: scale(1.1, 1.1);
 }
 
 @keyframes in-keyframes {
