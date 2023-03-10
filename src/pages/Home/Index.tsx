@@ -1,12 +1,30 @@
 import Person from "../../assets/person.png";
 import unhas from "../../assets/unhas.jpg";
 
-import { Banner, Box, Content, Picture, Text } from "./styles";
+import Logo from "../../assets/logo.svg";
+
+import { Carousel } from "../../components/Carousel/Index";
+
+import { Banner, Box, CarouselContainer, Content, Picture, Text } from "./styles";
+import { useEffect } from "react";
+
+
+const Images = [
+  unhas,
+  unhas,
+  unhas,
+  unhas,
+  unhas,
+  unhas,
+]
 
 const linkWhatsApp =
   "https://api.whatsapp.com/send?phone=5511958249395&text=Ol%C3%A1%20gostaria%20de%20marcar%20um%20hor%C3%A1rio!";
 
 export default function Home() {
+  useEffect(() => {
+    console.log(Carousel);
+  }, []);
   return (
     <>
       <Banner>
@@ -26,12 +44,12 @@ export default function Home() {
 
       <Box>
         <Picture>
-          <img src={unhas} alt="" />
+          <img src={unhas} alt="Unhas Decorativas Francesinha" />
         </Picture>
         <Content>
           <h3>Autoridade em Encatar Suas Unhas</h3>
           <p>
-            Suas atividade iniciaram 2018 e desde então Katia Lima vem
+            Suas atividade iniciaram 2008 e desde então Katia Lima vem
             demonstrando seu trabalho com excelência, com experiência em
             diversos tipos de unhas decorativas!{" "}
           </p>

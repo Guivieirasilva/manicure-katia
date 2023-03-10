@@ -2,22 +2,34 @@ import styled from "styled-components";
 
 export const Banner = styled.div`
   background-color: var(--primaryDark);
-  width: "100%";
+  width: '100%';
   height: 500px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   flex-direction: row;
+  gap: 5rem;
   padding: 50px;
+  margin: 0 auto;
   > img {
+    max-width: 700px;
+    min-width: 480px;
     width: 60%;
   }
+  @media screen and (max-width: 980px) {
+  gap: .5rem;
 
-  @media screen and (max-width: 650px) {
+    > img {
+    width: 90%;
+  }
+  }
+
+  @media screen and (max-width: 680px) {
+
     flex-direction: column;
     justify-content: center;
     > img {
-      width: 100%;
+      width: 90%;
     }
   }
 `;
@@ -76,18 +88,34 @@ export const Box = styled.section`
   @media screen and (max-width: 1050px) {
     display: flex;
     flex-direction: column;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    margin: 0px auto;
+
+  }
+  @media screen and (max-width: 600px) {
+    padding: 50px;
+  margin: 10px;
+
+
   }
 `;
 
 export const Picture = styled.div`
-  width: 100%;
+  max-width: 100%;
   > img {
+  max-width: 700px;
+
     width: 100%;
     border-radius: 0.2rem;
   }
   @media screen and (max-width: 1050px) {
-    width: 90%;
+    width: 70%;
     margin: auto;
+  }
+  @media screen and (max-width: 600px) {
+    width: 80%;
   }
 `;
 
@@ -132,4 +160,17 @@ export const Content = styled.div`
       font-size: 0.8rem;
     }
   }
+`;
+
+export const CarouselContainer = styled.section`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1050px;
+  width: '70%';
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px 10px;
+
 `;
