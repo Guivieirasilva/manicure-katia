@@ -5,7 +5,7 @@ import Logo from "../../assets/logo.svg";
 
 import { Carousel } from "../../components/Carousel/Index";
 
-import { Banner, Box, CarouselContainer, Content, Picture, Text } from "./styles";
+import { Banner, Box, CarouselContainer, Content, Picture, SubTitle, Text } from "./styles";
 import { useEffect } from "react";
 
 
@@ -55,6 +55,10 @@ export default function Home() {
           </p>
         </Content>
       </Box>
+        <SubTitle><h3>Trabalhos</h3></SubTitle>
+      <CarouselContainer>
+        <Carousel images={Images} />
+      </CarouselContainer>
     </>
   );
 }

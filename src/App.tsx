@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import { BubblyContainer } from "react-bubbly-transitions";
+import 'keen-slider/keen-slider.min.css'
 
 import About from "./pages/About/Index";
 import Works from "./pages/Works/Index";

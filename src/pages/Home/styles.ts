@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Banner = styled.div`
   background-color: var(--primaryDark);
-  width: '100%';
+  width: "100%";
   height: 500px;
   display: flex;
   align-items: center;
@@ -17,15 +17,15 @@ export const Banner = styled.div`
     width: 60%;
   }
   @media screen and (max-width: 980px) {
-  gap: .5rem;
+    gap: 0.5rem;
 
     > img {
-    width: 90%;
-  }
+    min-width: 300px;
+      /* width: 90%; */
+    }
   }
 
   @media screen and (max-width: 680px) {
-
     flex-direction: column;
     justify-content: center;
     > img {
@@ -92,20 +92,17 @@ export const Box = styled.section`
     padding-right: 40px;
     padding-bottom: 20px;
     margin: 0px auto;
-
   }
   @media screen and (max-width: 600px) {
     padding: 50px;
-  margin: 10px;
-
-
+    margin: 10px;
   }
 `;
 
 export const Picture = styled.div`
   max-width: 100%;
   > img {
-  max-width: 700px;
+    max-width: 700px;
 
     width: 100%;
     border-radius: 0.2rem;
@@ -166,11 +163,43 @@ export const CarouselContainer = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 1050px;
-  width: '70%';
-  height: 400px;
+  max-width: 1200px;
+  width: "70%";
+  height: 300px;
   margin-left: auto;
   margin-right: auto;
   padding: 0px 10px;
 
+  @media screen and (max-width: 1350px) {
+    max-width: 1000px;
+  }
+  @media screen and (max-width: 1150px) {
+    max-width: 850px;
+  }
+  @media screen and (max-width: 1000px) {
+    max-width: 650px;
+  }
+  @media screen and (max-width: 800px) {
+    max-width: 550px;
+  }
+  @media screen and (max-width: 650px) {
+    max-width: 300px;
+  }
+  @media screen and (max-width: 450px) {
+    max-width: 250px;
+  }
 `;
+
+export const SubTitle = styled.div`
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: 'center';
+  justify-content: 'center';
+  >h3 {
+    display: flex;
+    margin: 0 auto;
+  }
+
+`
