@@ -10,7 +10,7 @@ export default function Nav({ MenuIsVisible }: PropsNavMenu) {
   return (
     <header className="headerNav">
       <BubblyLink to="/">
-        <h1 style={{ letterSpacing: 6, color: "white" }}>Katia Manicure</h1>
+        <h1 style={{ letterSpacing: '7px', color: "white" }}>Katia Manicure</h1>
       </BubblyLink>
       <nav
         className="animate-in navbar"
