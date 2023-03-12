@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import { BubblyContainer } from "react-bubbly-transitions";
-import 'keen-slider/keen-slider.min.css'
+import "keen-slider/keen-slider.min.css";
 
 import About from "./pages/About/Index";
 import Works from "./pages/Works/Index";
@@ -11,6 +11,7 @@ import "./App.css";
 import Nav from "./components/Nav/Index";
 import { useState } from "react";
 import { NavMenuMobile } from "./components/NavMenuMobile/Index";
+import Footer from "./components/Footer/Index";
 
 function App() {
   const [menuIsVisible, setMenuIsVisible] = useState(false);
@@ -32,7 +33,7 @@ function App() {
         <Route path="Contact" element={<Contact />} />
         <Route path="*" element={<>NOT FOUND</>} />
       </Routes>
-
+      <Footer />
     </BrowserRouter>
   );
 }
