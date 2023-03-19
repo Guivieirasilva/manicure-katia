@@ -82,7 +82,7 @@ export const Box = styled.section`
   display: grid;
   grid-template-columns: 3fr 2fr;
   max-width: 1400px;
-  margin: 50px auto;
+  margin: 100px auto;
   padding: 100px;
 
   @media screen and (max-width: 1050px) {
@@ -91,7 +91,7 @@ export const Box = styled.section`
     padding-left: 40px;
     padding-right: 40px;
     padding-bottom: 20px;
-    margin: 0px auto;
+    margin: 20px auto;
   }
   @media screen and (max-width: 600px) {
     padding: 50px;
@@ -199,7 +199,7 @@ export const SubTitle = styled.div`
   justify-content: 'center';
   >h3 {
     display: flex;
-    margin: 0 auto;
+    margin: 10px auto;
   }
 
 `

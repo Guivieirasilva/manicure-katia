@@ -5,18 +5,18 @@ import Logo from "../../assets/logo.svg";
 
 import { Carousel } from "../../components/Carousel/Index";
 
-import { Banner, Box, CarouselContainer, Content, Picture, SubTitle, Text } from "./styles";
+import {
+  Banner,
+  Box,
+  CarouselContainer,
+  Content,
+  Picture,
+  SubTitle,
+  Text,
+} from "./styles";
 import { useEffect } from "react";
 
-
-const Images = [
-  unhas,
-  unhas,
-  unhas,
-  unhas,
-  unhas,
-  unhas,
-]
+const Images = [unhas, unhas, unhas, unhas, unhas, unhas];
 
 const linkWhatsApp =
   "https://api.whatsapp.com/send?phone=5511958249395&text=Ol%C3%A1%20gostaria%20de%20marcar%20um%20hor%C3%A1rio!";
@@ -47,15 +47,23 @@ export default function Home() {
           <img src={unhas} alt="Unhas Decorativas Francesinha" />
         </Picture>
         <Content>
-          <h3>Autoridade em Encatar Suas Unhas</h3>
+          <h3>Especialista em Embelezar Suas Unhas.</h3>
           <p>
-            Suas atividade iniciaram 2008 e desde então Katia Lima vem
-            demonstrando seu trabalho com excelência, com experiência em
-            diversos tipos de unhas decorativas!{" "}
+            Katia Lima é uma manicure que não mede esforços para tornar suas
+            unhas verdadeiras obras de arte. Com mais de uma década de
+            experiência em sua bagagem, ela vem aprimorando suas habilidades e
+            aperfeiçoando técnicas em diversas áreas da decoração de unhas.
+            Desde 2008, Katia vem mostrando que a excelência é sua marca
+            registrada, e que seus clientes podem contar com um trabalho
+            impecável e de qualidade. Se você está procurando uma profissional
+            que realmente entende de unhas decorativas, Katia Lima é a escolha
+            certa para você{" "}
           </p>
         </Content>
       </Box>
-        <SubTitle><h3>Trabalhos</h3></SubTitle>
+      <SubTitle>
+        <h3>Trabalhos</h3>
+      </SubTitle>
       <CarouselContainer>
         <Carousel images={Images} />
       </CarouselContainer>
