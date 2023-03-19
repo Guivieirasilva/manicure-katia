@@ -8,6 +8,8 @@
   background-color: #e8e8e6;
 
   --background: #e8e8e6;
+  --backgroundText: #e4e4e4;
+
   --primary: #9d3dc8;
   --textColor: #ffffff;
   --primaryDark: #8e38b5;
@@ -31,6 +33,10 @@ nav {
   display: flex;
   gap: 10px;
   color: var(--textColor);
+}
+
+p {
+  font-family: "inter", sans-serif;
 }
 
 h1 {
