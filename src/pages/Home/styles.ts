@@ -20,7 +20,7 @@ export const Banner = styled.div`
     gap: 0.5rem;
 
     > img {
-    min-width: 300px;
+      min-width: 300px;
       /* width: 90%; */
     }
   }
@@ -117,23 +117,27 @@ export const Picture = styled.div`
 `;
 
 export const Content = styled.div`
-  font-family: "Libre Baskerville", serif;
-  font-weight: 700;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  height: 40%;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  gap: 0.1rem;
+  height: 70%;
   align-self: end;
-  padding: 4rem 0 0 4rem;
+  padding: 2rem 0 1rem 4rem;
   width: 140%;
+  max-width: 600px;
   margin-left: -10rem;
-  background-color: var(--background);
+  background-color: var(--backgroundText);
   text-align: left;
+  justify-content: center;
   /* height: 350px; */
   > h3 {
     font-size: 1.6rem;
+    margin: 10px 0;
   }
   > p {
+    text-align: justify;
     font-size: 1rem;
     max-width: 90%;
     font-family: "inter", sans-serif;
@@ -145,13 +149,17 @@ export const Content = styled.div`
     margin: auto;
     padding: 1rem;
     text-align: center;
+    > h3 {
+      font-size: 1.5rem;
+    }
     > p {
+      text-align: justify;
       margin: 20px auto;
     }
   }
   @media screen and (max-width: 750px) {
     > h3 {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
     }
     > p {
       font-size: 0.8rem;
@@ -195,11 +203,10 @@ export const SubTitle = styled.div`
   font-weight: 700;
   font-size: 1.6rem;
   display: flex;
-  align-items: 'center';
-  justify-content: 'center';
-  >h3 {
+  align-items: "center";
+  justify-content: "center";
+  > h3 {
     display: flex;
     margin: 10px auto;
   }
-
-`
+`;

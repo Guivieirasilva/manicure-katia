@@ -49,15 +49,12 @@ export default function Home() {
         <Content>
           <h3>Especialista em Embelezar Suas Unhas.</h3>
           <p>
-            Katia Lima é uma manicure que não mede esforços para tornar suas
-            unhas verdadeiras obras de arte. Com mais de uma década de
-            experiência em sua bagagem, ela vem aprimorando suas habilidades e
-            aperfeiçoando técnicas em diversas áreas da decoração de unhas.
-            Desde 2008, Katia vem mostrando que a excelência é sua marca
-            registrada, e que seus clientes podem contar com um trabalho
-            impecável e de qualidade. Se você está procurando uma profissional
-            que realmente entende de unhas decorativas, Katia Lima é a escolha
-            certa para você{" "}
+            Com as habilidades aperfeiçoadas ao longo de mais de uma década de
+            experiência, Katia Lima é uma manicure experiente que transforma as
+            unhas em verdadeiras obras de arte. Se você deseja um trabalho de
+            excelência e um visual personalizado, confie nas técnicas precisas e
+            na abordagem personalizada de Katia. Agende agora mesmo o seu
+            atendimento e tenha unhas decorativas impecáveis e exclusivas.{" "}
           </p>
         </Content>
       </Box>
