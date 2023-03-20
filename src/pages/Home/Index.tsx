@@ -29,7 +29,7 @@ export default function Home() {
     <>
       <Banner>
         <Text>
-          <h2>Agende um Horário</h2>
+          <h2>Agende agora e garanta seu atendimento personalizado!</h2>
           <p>
             De Segunda a Sábado: das 9h até as 20h <br /> Domingo: das 10h as
             17h

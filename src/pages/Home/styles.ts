@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Banner = styled.div`
   background-color: var(--primaryDark);
   width: "100%";
+  text-shadow: black 0.1em 0.1em 0.2em;
   height: 500px;
   display: flex;
   align-items: center;
@@ -18,10 +19,8 @@ export const Banner = styled.div`
   }
   @media screen and (max-width: 980px) {
     gap: 0.5rem;
-
     > img {
       min-width: 300px;
-      /* width: 90%; */
     }
   }
 
@@ -42,13 +41,11 @@ export const Text = styled.div`
   text-align: center;
   justify-content: center;
   margin-bottom: 25px;
-  /* gap: 10px; */
   > h2 {
     font-family: "Libre Baskerville", serif;
     font-weight: 700;
     letter-spacing: 0.5px;
-    /* text-transform: uppercase; */
-    font-size: 1.6rem;
+    font-size: 1.3rem;
   }
   > p {
     font-family: "inter", sans-serif;
