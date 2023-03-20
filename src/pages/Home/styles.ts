@@ -168,28 +168,32 @@ export const CarouselContainer = styled.section`
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 80%;
   max-width: 1200px;
-  width: "70%";
-  height: 300px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0px 10px;
+  height: 320px;
+  margin: 0 auto 50px auto;
+  padding: 0 10px;
 
-  @media screen and (max-width: 1350px) {
+  @media screen and (max-width: 1350px) and (min-width: 1151px) {
     max-width: 1000px;
   }
-  @media screen and (max-width: 1150px) {
+
+  @media screen and (max-width: 1150px) and (min-width: 1001px) {
     max-width: 850px;
   }
-  @media screen and (max-width: 1000px) {
+
+  @media screen and (max-width: 1000px) and (min-width: 801px) {
     max-width: 650px;
   }
-  @media screen and (max-width: 800px) {
+
+  @media screen and (max-width: 800px) and (min-width: 651px) {
     max-width: 550px;
   }
-  @media screen and (max-width: 650px) {
-    max-width: 300px;
+
+  @media screen and (max-width: 650px) and (min-width: 451px) {
+    max-width: 350px;
   }
+
   @media screen and (max-width: 450px) {
     max-width: 250px;
   }
