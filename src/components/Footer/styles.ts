@@ -9,7 +9,6 @@ export const FooterContainer = styled.footer`
   flex-direction: row;
   align-items: center;
   padding: 20px 50px;
-  margin-top: 100px;
   color: (--textColor);
 
   @media screen and (max-width: 800px) {
