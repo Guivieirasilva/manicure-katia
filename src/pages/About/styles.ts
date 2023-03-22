@@ -147,7 +147,7 @@ export const CarouselContainer = styled.section`
 export const Methodology = styled.article`
   background-color: var(--background);
   display: flex;
-  width: 100%;
+  /* width: 100%; */
   height: 800px;
   margin-top: 50px;
   flex-direction: column;
@@ -183,7 +183,9 @@ export const Methodology = styled.article`
 
   @media screen and (max-width: 800px) {
     height: 750px;
-
+    >h3 {
+      font-size: 1.4rem;
+    }
     > .desktop {
       display: none;
     }
