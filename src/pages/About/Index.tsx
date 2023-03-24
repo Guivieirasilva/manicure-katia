@@ -8,11 +8,12 @@ import {
   Text,
 } from "./styles";
 
-const Images = [unhas, unhas, unhas, unhas, unhas, unhas];
-import unhas from "../../assets/unhas.jpg";
-import { Carousel } from "../../components/Carousel/Index";
-import { CarouselContainer } from "./styles";
+import ambiente1 from "../../assets/ambiente1.jpg"
+import ambiente2 from "../../assets/ambiente2.jpg"
 import Person from "../../assets/image-about.png";
+import { CarouselLarge } from "../../components/CarouselLarge/Index";
+
+const images = [ambiente1,ambiente2,ambiente2,ambiente1] 
 
 export default function About() {
   return (
@@ -40,9 +41,17 @@ export default function About() {
         <SubTitle>
           <h3>Veja o Ambiente de Trabalho!</h3>
         </SubTitle>
-        <CarouselContainer>
-          <Carousel images={Images} />
-        </CarouselContainer>
+        <div
+      style={{
+        width: "100%",
+        height: "500px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <CarouselLarge images={images} />
+    </div>
       </ContainerCarousel>
       <Methodology>
         <h3>Nosso Método de Cuidado com suas Unhas!</h3>
