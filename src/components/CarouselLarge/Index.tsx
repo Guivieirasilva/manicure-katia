@@ -14,7 +14,7 @@ export function CarouselLarge({ images }: CarouselProps) {
   const [ref] = useKeenSlider<HTMLDivElement>({
     loop: true,
     breakpoints: {
-      "(min-width: 1000px)": {
+      "(max-width: 1700px)": {
         slides: { perView: 1, spacing: 5 },
         created(s) {
           s.moveToIdx(3, true, animation);

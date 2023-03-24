@@ -1,45 +1,34 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  max-width: 800px;
+  max-width: 840px;
   display: flex;
   align-items: center;
   height: 100%;
-  max-height: 300px;
+  max-height: 320px;
 
   @media screen and (max-width: 1024px) and (min-width: 799px) {
     max-width: 640px;
     max-height: 280px;
-
-    [class^="number-slide"],
-    [class*=" number-slide"] {
-      max-height: 280px;
-    }
   }
 
   @media screen and (max-width: 800px) and (min-width: 639px) {
-    max-width: 480px;
-    max-height: 200px;
-
-    [class^="number-slide"],
-    [class*=" number-slide"] {
-      max-height: 200px;
-    }
+    max-width: 560px;
+    max-height: 240px;
   }
 
-  @media screen and (max-width: 640px) and (min-width: 319px) {
+  @media screen and (max-width: 640px) and (min-width: 539px) {
+    max-width: 420px;
+    max-height: 200px;
+  }
+  @media screen and (max-width: 540px) and (min-width: 319px) {
     max-width: 340px;
-    max-height: 120px;
-
-    [class^="number-slide"],
-    [class*=" number-slide"] {
-      max-height: 120px;
-    }
+    max-height: 170px;
   }
 
   [class^="number-slide"],
   [class*=" number-slide"] {
-    background: grey;
+    background: black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,5 +38,4 @@ export const Container = styled.div`
     height: 100%;
     max-height: 300px;
   }
-
 `;
