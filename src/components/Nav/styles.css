@@ -9,7 +9,10 @@
 
 h1 {
   font-size: 2rem;
-  text-shadow: gray 0.1em 0.1em 0.2em;
+  text-shadow: black 0.1em 0.1em 0.1em;
+}
+.navbar button {
+  text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 @media screen and (max-width: 650px) {
