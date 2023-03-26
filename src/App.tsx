@@ -12,6 +12,7 @@ import Nav from "./components/Nav/Index";
 import { useState } from "react";
 import { NavMenuMobile } from "./components/NavMenuMobile/Index";
 import Footer from "./components/Footer/Index";
+import { AsideButton } from "./components/AsideButton";
 
 function App() {
   const [menuIsVisible, setMenuIsVisible] = useState(false);
@@ -23,7 +24,7 @@ function App() {
         setMenuIsVisible={setMenuIsVisible}
       />
       <Nav MenuIsVisible={() => setMenuIsVisible(true)} />
-
+      <AsideButton />
       <BubblyContainer />
       <Routes>
         <Route path="/" element={<Outlet />} />
