@@ -31,7 +31,9 @@ export const MenuMobile = styled.section<Props>`
     box-sizing: border-box;
     padding: 1rem;
     > button > h1 {
-      font-size: 2em;
+      font-size: 1.7em;
+  text-shadow: gray 0.1em 0.1em 0.2em;
+
     }
 
     > .button {
@@ -61,6 +63,7 @@ export const MenuMobile = styled.section<Props>`
       font-family: "Josefin Sans", sans-serif;
       > li > button {
         font-size: 1.4rem;
+        text-shadow: gray 0.1em 0.1em 0.2em;
         transition-duration: 0.5s;
         &:hover,
         &:focus {

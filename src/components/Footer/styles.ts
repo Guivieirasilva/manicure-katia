@@ -27,11 +27,16 @@ export const Nav = styled.div`
   justify-content: center;
   flex-direction: column;
   > h2 {
+    text-shadow: gray 0.1em 0.1em 0.2em;
     color: (--textColor);
     font-family: "Great Vibes", cursive;
     letter-spacing: 5px;
   }
-
+  > div {
+    > button {
+      text-shadow: gray 0.1em 0.1em 0.2em;
+    }
+  }
   @media screen and (max-width: 800px) {
     align-items: center;
     > h2 {

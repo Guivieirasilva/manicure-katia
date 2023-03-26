@@ -25,6 +25,15 @@ export function Carousel({ images }: CarouselProps) {
       },
       "(min-width: 660px)": {
         slides: { perView: 2, spacing: 5 },
+        created(s) {
+          s.moveToIdx(4, true, animation);
+        },
+        updated(s) {
+          s.moveToIdx(s.track.details.abs + 4, true, animation);
+        },
+        animationEnded(s) {
+          s.moveToIdx(s.track.details.abs + 4, true, animation);
+        },
       },
       "(min-width: 1000px)": {
         slides: { perView: 3, spacing: 10 },
@@ -47,54 +56,18 @@ export function Carousel({ images }: CarouselProps) {
   });
   return (
     <Container ref={ref} className="keen-slider">
-      <div className="keen-slider__slide number-slide">
+      {images.map((src, inx) => (
+
+      <div key={inx} className="keen-slider__slide number-slide">
         <img
           width={"100%"}
           height={"100%"}
-          src={images[0]}
+          src={src}
           alt="Ilustração do trabalho"
         />
       </div>
-      <div className="keen-slider__slide number-slide">
-        <img
-          width={"100%"}
-          height={"100%"}
-          src={images[1]}
-          alt="Ilustração do trabalho"
-        />
-      </div>
-      <div className="keen-slider__slide number-slide">
-        <img
-          width={"100%"}
-          height={"100%"}
-          src={images[2]}
-          alt="Ilustração do trabalho"
-        />
-      </div>
-      <div className="keen-slider__slide number-slide">
-        <img
-          width={"100%"}
-          height={"100%"}
-          src={images[3]}
-          alt="Ilustração do trabalho"
-        />
-      </div>
-      <div className="keen-slider__slide number-slide">
-        <img
-          width={"100%"}
-          height={"100%"}
-          src={images[4]}
-          alt="Ilustração do trabalho"
-        />
-      </div>
-      <div className="keen-slider__slide number-slide">
-        <img
-          width={"100%"}
-          height={"100%"}
-          src={images[5]}
-          alt="Ilustração do trabalho"
-        />
-      </div>
+      ))}
+      
     </Container>
   );
 }
