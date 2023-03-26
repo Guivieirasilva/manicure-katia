@@ -81,6 +81,7 @@ export const Box = styled.section`
   max-width: 1400px;
   margin: 100px auto;
   padding: 100px;
+  border-bottom: 0.5px solid var(--textColor);
 
   @media screen and (max-width: 1050px) {
     display: flex;
@@ -173,6 +174,7 @@ export const CarouselContainer = styled.section`
   height: 320px;
   margin: 0 auto 50px auto;
   padding: 0 10px;
+  padding-bottom: 40px;
 
   @media screen and (max-width: 1350px) and (min-width: 1151px) {
     max-width: 1000px;
