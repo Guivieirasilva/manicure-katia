@@ -15,7 +15,7 @@ h1 {
   text-shadow: black 0.1em 0.1em 0.2em;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 760px) {
   .navbar {
     display: none;
   }

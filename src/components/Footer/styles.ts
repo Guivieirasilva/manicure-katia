@@ -8,12 +8,12 @@ export const FooterContainer = styled.footer`
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
-  padding: 20px 50px;
+  padding: 10px 10%;
   color: (--textColor);
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 860px) {
     flex-direction: column;
-    padding: 40px 50px;
+    padding: 20px 5%;
     height: 240px;
     gap: 10px;
     justify-content: space-around;
@@ -37,7 +37,7 @@ export const Nav = styled.div`
       text-shadow: gray 0.1em 0.1em 0.2em;
     }
   }
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 860px) {
     align-items: center;
     > h2 {
       text-align: center;
@@ -70,7 +70,7 @@ export const SocialMedia = styled.div`
     color: #fff;
   }
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 860px) {
     align-items: center;
     > div > p {
       text-align: center;
