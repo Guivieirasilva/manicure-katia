@@ -1,22 +1,75 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Container, Form, Label, Localization, SocialMedias } from "./styles";
 
 import facebook from "../../assets/iconFacebook.svg";
 import whatsapp from "../../assets/iconsWhatsapp.svg";
 import instagram from "../../assets/iconInstagram.svg";
+import ValidationEmail from "../../helpers/ValidationEmail";
+import PhoneMask from "../../helpers/phoneMask";
 
 const linkFacebook = "https://www.facebook.com/katia.limagoncalves";
 const linkInstagram = "https://www.instagram.com/kkatia_lima/";
 const linkWhatsapp = "https://www.whatsapp.com/";
 
+interface IForm {
+  nome: string;
+  email: string;
+  telefone: string;
+  assunto: string;
+  duvida: string;
+}
+
 export default function Contact() {
-  const [inputsForm, setInputsForm] = useState({
+  const [inputsForm, setInputsForm] = useState<IForm>({
     nome: "",
     email: "",
     telefone: "",
     assunto: "",
     duvida: "",
   });
+
+  // const [formErrors, setFormErrors] = useState({});
+  // const errors = validateForm(inputsForm);
+
+  // function handleFormSubmit(e: any) {
+  //   e.preventDefault();
+  //   const errors = validateForm(inputsForm);
+  //   setFormErrors(errors);
+  // }
+
+  function validateForm(inputsForm: IForm) {
+    const { nome, email, telefone, assunto, duvida } = inputsForm;
+    const errors: Partial<IForm> = {};
+
+    if (nome.trim() === "") {
+      errors.nome = "O campo nome é obrigatório.";
+    }
+
+    if (email.trim() === "") {
+      errors.email = "O campo email é obrigatório.";
+    } else if (!isValidEmail(email)) {
+      errors.email = "Digite um email válido.";
+    }
+
+    if (telefone.trim() === "") {
+      errors.telefone = "O campo telefone é obrigatório.";
+    }
+
+    if (assunto.trim() === "") {
+      errors.assunto = "O campo assunto é obrigatório.";
+    }
+
+    if (duvida.trim() === "") {
+      errors.duvida = "O campo dúvida é obrigatório.";
+    }
+
+    return errors;
+  }
+
+  function isValidEmail(email: string) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
 
   return (
     <Container>
@@ -86,7 +139,7 @@ export default function Contact() {
           <Label htmlFor="telefone">
             Telefone:
             <input
-              value={inputsForm.telefone}
+              value={PhoneMask(inputsForm.telefone)}
               onChange={(e) =>
                 setInputsForm({
                   ...inputsForm,

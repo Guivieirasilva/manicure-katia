@@ -123,6 +123,11 @@ export const Form = styled.div`
         border-color: var(--textColor);
       }
     }
+    .error-message {
+      color: red;
+      margin-left: 10px;
+      font-size: 14px;
+    }
   }
 `;
 export const Label = styled.label`
