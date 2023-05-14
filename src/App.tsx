@@ -13,6 +13,7 @@ import { useState } from "react";
 import { NavMenuMobile } from "./components/NavMenuMobile/Index";
 import Footer from "./components/Footer/Index";
 import { AsideButton } from "./components/AsideButton";
+import { ModalAceptTerms } from "./components/Terms";
 
 function App() {
   const [menuIsVisible, setMenuIsVisible] = useState(false);
@@ -34,6 +35,7 @@ function App() {
         <Route path="Contact" element={<Contact />} />
         <Route path="*" element={<>NOT FOUND</>} />
       </Routes>
+      <ModalAceptTerms />
       <Footer />
     </BrowserRouter>
   );
