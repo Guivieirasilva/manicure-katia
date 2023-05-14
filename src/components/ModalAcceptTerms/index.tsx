@@ -3,7 +3,7 @@ import Cookies from "js-cookie";
 import { ModalWrapper, ModalContent, Message, Button } from "./styles";
 
 // Componente do modal de cookies
-export const ModalAceptTerms: React.FC = () => {
+export const ModalAcceptTerms: React.FC = () => {
   const [isVisible, setIsVisible] = useState(!Cookies.get("cookieAccepted"));
 
   const handleAccept = () => {
