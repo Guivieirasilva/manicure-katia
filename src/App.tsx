@@ -15,6 +15,7 @@ import Footer from "./components/Footer/Index";
 import { AsideButton } from "./components/AsideButton";
 import { ModalAcceptTerms } from "./components/ModalAcceptTerms";
 import TermsPage from "./pages/Terms";
+import NotFoundPage from "./pages/404";
 
 function App() {
   const [menuIsVisible, setMenuIsVisible] = useState(false);
@@ -36,7 +37,7 @@ function App() {
         <Route path="Contact" element={<Contact />} />
         <Route path="Terms" element={<TermsPage />} />
 
-        <Route path="*" element={<>NOT FOUND</>} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <ModalAcceptTerms />
       <Footer />
