@@ -11,8 +11,8 @@ export const Asise = styled.aside`
     transform: scale(1.1, 1.1);
   }
   > div {
-    width: 50px;
-    height: 40px;
+    width: 60px;
+    height: 50px;
     > a {
       > img {
         width: 100%;

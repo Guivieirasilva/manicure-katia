@@ -6,6 +6,7 @@ export const ModalWrapper = styled.div`
   left: 10%;
   right: 10%;
   width: 80%;
+  border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 20px;
   z-index: 9999;
@@ -18,8 +19,9 @@ export const ModalWrapper = styled.div`
 
 export const ModalContent = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   align-items: center;
+  flex-direction: row;
   justify-content: space-between;
   max-width: 650px;
   margin: 0 auto;

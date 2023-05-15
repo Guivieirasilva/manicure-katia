@@ -7,11 +7,17 @@
   margin: 0;
   background-color: #e8e8e6;
 
+  /* Cores */
   --background: #e8e8e6;
   --backgroundText: #e7e7e6;
   --primary: #9d3dc8;
   --textColor: #ffffff;
   --primaryDark: #8e38b5;
+
+  /* Fontes */
+  --TITLE: "Playfair Display", serif;
+  --TEXT: "Montserrat", sans-serif;
+  --SUBTITLE: "Pacifico", cursive;
 }
 
 body {
@@ -35,7 +41,7 @@ nav {
 }
 
 p {
-  font-family: "inter", sans-serif;
+  font-family: var(--TEXT);
 }
 
 h1 {

@@ -13,6 +13,7 @@ export const TermsPageWrapper = styled.div`
 
 export const Title = styled.h2`
   font-size: 26px;
+  text-shadow: black 0.1em 0.1em 0.2em;
   font-family: "inter", sans-serif;
   letter-spacing: 1px;
   margin-bottom: 20px;
@@ -22,6 +23,7 @@ export const Title = styled.h2`
 export const Text = styled.p`
   margin-bottom: 10px;
   color: var(--textColor);
+  text-shadow: gray 0.1em 0.1em 0.2em;
   font-family: "inter", sans-serif;
 `;
 
