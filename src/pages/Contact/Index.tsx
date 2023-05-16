@@ -28,14 +28,30 @@ export default function Contact() {
     duvida: "",
   });
 
-  // const [formErrors, setFormErrors] = useState({});
-  // const errors = validateForm(inputsForm);
+  const url = "http://localhost:3333/register";
 
-  // function handleFormSubmit(e: any) {
-  //   e.preventDefault();
-  //   const errors = validateForm(inputsForm);
-  //   setFormErrors(errors);
-  // }
+  async function registerUser(user: IForm) {
+    try {
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(user),
+      });
+
+      if (!response.ok) {
+        throw new Error("Erro ao enviar sua duvida!");
+      }
+
+      const data = await response.json();
+      console.log("Sua Duvida foi enviada com sucesso", data);
+      const message = data.message;
+      alert(message);
+    } catch (error) {
+      console.error(error);
+    }
+  }
 
   function validateForm(inputsForm: IForm) {
     const { nome, email, telefone, assunto, duvida } = inputsForm;
@@ -96,10 +112,14 @@ export default function Contact() {
           </a>
         </div>
       </SocialMedias>
-
       <Form>
         <h2>Entre em Contato</h2>
-        <form>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault(); // Evita a atualização da página
+            registerUser(inputsForm); // Chamada da função para registrar o usuário
+          }}
+        >
           <Label htmlFor="nome">
             Nome Completo:
             <input
@@ -189,9 +209,7 @@ export default function Contact() {
             ></textarea>
           </Label>
 
-          <button type="submit" onChange={(e) => e.preventDefault()}>
-            Enviar
-          </button>
+          <button type="submit">Enviar</button>
         </form>
       </Form>
     </Container>
