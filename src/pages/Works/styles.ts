@@ -27,7 +27,7 @@ export const CarouselContainer = styled.section`
   width: 80%;
   max-width: 1200px;
   height: 320px;
-  margin: 0 auto 50px auto;
+  margin: 20px auto 50px auto;
   padding: 0 10px;
 
   @media screen and (max-width: 1350px) and (min-width: 1151px) {
@@ -50,9 +50,6 @@ export const CarouselContainer = styled.section`
     max-width: 350px;
   }
 
-  @media screen and (max-width: 450px) {
-    max-width: 250px;
-  }
 `;
 
 export const SubTitle = styled.div`

@@ -11,7 +11,7 @@ import ambiente2 from "../../assets/ambiente2.jpg"
 import Person from "../../assets/image-about.png"
 import { CarouselLarge } from "../../components/CarouselLarge/Index"
 
-const images = [ambiente2,ambiente2,ambiente2,ambiente2] 
+const images = [ambiente2, ambiente2, ambiente2, ambiente2]
 
 export default function About() {
   return (
@@ -39,17 +39,7 @@ export default function About() {
         <SubTitle>
           <h3>Veja o Ambiente de Trabalho!</h3>
         </SubTitle>
-        <div
-      style={{
-        width: "100%",
-        height: "500px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      <CarouselLarge images={images} />
-    </div>
+        <CarouselLarge images={images} />
       </ContainerCarousel>
       <Methodology>
         <h3>Nosso Método de Cuidado com suas Unhas!</h3>
@@ -82,19 +72,19 @@ export default function About() {
           áreas da decoração de unhas garantem um trabalho impecável e de
           excelência.
         </p>
-          <p className="mobile">
-            A metodologia de trabalho de Katia Lima, uma experiente manicure, é
-            baseada em uma abordagem personalizada e técnica. Ela começa
-            avaliando as unhas do cliente para entender suas necessidades e
-            preferências, além de identificar possíveis problemas. Em seguida,
-            prepara as unhas para receber o tratamento ou decoração escolhidos,
-            utilizando materiais de alta qualidade e diversas técnicas, como
-            pintura à mão livre, aplicação de adesivos, carimbos e pedrarias.
-            Finaliza o trabalho com uma camada de finalizador para proteger e
-            dar brilho às unhas, além de oferecer dicas e cuidados para
-            mantê-las bonitas e saudáveis. A metodologia de Katia garante um
-            resultado final de qualidade e satisfação dos clientes.
-          </p>
+        <p className="mobile">
+          A metodologia de trabalho de Katia Lima, uma experiente manicure, é
+          baseada em uma abordagem personalizada e técnica. Ela começa
+          avaliando as unhas do cliente para entender suas necessidades e
+          preferências, além de identificar possíveis problemas. Em seguida,
+          prepara as unhas para receber o tratamento ou decoração escolhidos,
+          utilizando materiais de alta qualidade e diversas técnicas, como
+          pintura à mão livre, aplicação de adesivos, carimbos e pedrarias.
+          Finaliza o trabalho com uma camada de finalizador para proteger e
+          dar brilho às unhas, além de oferecer dicas e cuidados para
+          mantê-las bonitas e saudáveis. A metodologia de Katia garante um
+          resultado final de qualidade e satisfação dos clientes.
+        </p>
       </Methodology>
     </Box>
   );

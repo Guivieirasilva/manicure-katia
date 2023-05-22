@@ -47,7 +47,7 @@ export default function Home() {
 
       <Box>
         <Picture>
-          <img src={esmaltes} alt="Unhas Decorativas Francesinha" />
+          <img src={esmaltes} alt="Esmaltes" />
         </Picture>
         <Content>
           <h3>Especialista em Embelezar Suas Unhas.</h3>

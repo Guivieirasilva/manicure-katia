@@ -10,8 +10,11 @@ export const Container = styled.div`
     font-size: 10px;
     color: #fff;
     font-weight: 500;
-    height: 250px;
+    height: 320px;
     max-height: 100vh;
+    @media screen and (max-width: 1050px) {
+      height: 280px;
+  }
   }
 
 `;

@@ -12,7 +12,6 @@ import Nav from "./components/Nav/Index";
 import { useState } from "react";
 import { NavMenuMobile } from "./components/NavMenuMobile/Index";
 import Footer from "./components/Footer/Index";
-import { AsideButton } from "./components/AsideButton";
 import { ModalAcceptTerms } from "./components/ModalAcceptTerms";
 import TermsPage from "./pages/Terms";
 import NotFoundPage from "./pages/404";
@@ -27,7 +26,6 @@ function App() {
         setMenuIsVisible={setMenuIsVisible}
       />
       <Nav MenuIsVisible={() => setMenuIsVisible(true)} />
-      <AsideButton />
       <BubblyContainer />
       <Routes>
         <Route path="/" element={<Outlet />} />

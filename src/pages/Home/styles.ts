@@ -79,7 +79,7 @@ export const Box = styled.section`
   display: grid;
   grid-template-columns: 3fr 2fr;
   max-width: 1400px;
-  /* margin: 100px auto; */
+  margin: 20px auto;
   padding: 100px;
   /* border-bottom: 0.5px solid var(--textColor); */
 
@@ -178,11 +178,11 @@ export const CarouselContainer = styled.section`
   align-items: center;
   justify-content: center;
   background-color: var(--primaryDark);
-  width: 80%;
+  width: 100%;
   max-width: 1200px;
   height: 320px;
-  margin: 0 auto 50px auto;
-  padding: 0 10px;
+  margin: 20px auto 50px auto;
+  /* padding: 0 10px; */
   padding-bottom: 40px;
 
   @media screen and (max-width: 1350px) and (min-width: 1151px) {
@@ -204,10 +204,6 @@ export const CarouselContainer = styled.section`
   @media screen and (max-width: 650px) and (min-width: 451px) {
     max-width: 350px;
   }
-
-  @media screen and (max-width: 450px) {
-    max-width: 250px;
-  }
 `;
 
 export const SubTitle = styled.div`
@@ -216,6 +212,7 @@ export const SubTitle = styled.div`
   font-weight: 700;
   font-size: 1.6rem;
   display: flex;
+  text-shadow: black 0.1em 0.1em 0.2em;
   align-items: "center";
   justify-content: "center";
   > h3 {

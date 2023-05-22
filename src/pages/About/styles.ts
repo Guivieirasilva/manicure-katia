@@ -78,8 +78,10 @@ export const Text = styled.div`
 export const ContainerCarousel = styled.div`
   width: 100%;
   background-color: #8e38b5;
-  height: 500px;
+  height: 400px;
   display: flex;
+  padding-bottom: 3rem;
+  gap: 3rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
