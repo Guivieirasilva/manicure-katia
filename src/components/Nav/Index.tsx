@@ -1,6 +1,6 @@
 import { BubblyLink } from "react-bubbly-transitions";
 import "./styles.css";
-import Menu from "../../assets/menu.svg";
+import Menu from "../../assets/icons/menu.svg";
 
 export interface PropsNavMenu {
   MenuIsVisible?: any;

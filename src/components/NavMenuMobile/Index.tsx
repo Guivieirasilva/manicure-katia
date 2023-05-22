@@ -1,6 +1,6 @@
 import { MenuMobile } from "./styles";
 
-import IconClose from "../../assets/icon-close.svg";
+import IconClose from "../../assets/icons/icon-close.svg";
 import { useEffect } from "react";
 import { BubblyLink } from "react-bubbly-transitions";
 

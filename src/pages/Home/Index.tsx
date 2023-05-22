@@ -1,13 +1,15 @@
-import Person from "../../assets/person.png";
-import unhas from "../../assets/unhas.jpg";
-
-import Logo from "../../assets/logo.svg";
-
-import { Carousel } from "../../components/Carousel/Index";
+import Person from "../../assets/person.png"
+import unhas1 from "../../assets/unha1.jpg"
+import unhas2 from "../../assets/unha2.jpg"
+import unhas3 from "../../assets/unha3.jpg"
+import unhas4 from "../../assets/unha4.jpg"
+import esmaltes from "../../assets/exemplo.jpg"
+import { Carousel } from "../../components/Carousel/Index"
 
 import {
   Banner,
   Box,
+  BoxCarousel,
   CarouselContainer,
   Content,
   Picture,
@@ -16,11 +18,12 @@ import {
 } from "./styles";
 import { useEffect } from "react";
 
-const Images = [unhas, unhas, unhas, unhas, unhas, unhas];
+const Images = [unhas1, unhas2, unhas3, unhas4];
 
 const linkWhatsApp =
-  "https://api.whatsapp.com/send?phone=5511958249395&text=Ol%C3%A1%20gostaria%20de%20marcar%20um%20hor%C3%A1rio!";
+  "https://api.whatsapp.com/";
 
+  /* send?phone=5511958249395&text=Ol%C3%A1%20gostaria%20de%20marcar%20um%20hor%C3%A1rio! */
 export default function Home() {
   useEffect(() => {
     console.log(Carousel);
@@ -44,7 +47,7 @@ export default function Home() {
 
       <Box>
         <Picture>
-          <img src={unhas} alt="Unhas Decorativas Francesinha" />
+          <img src={esmaltes} alt="Unhas Decorativas Francesinha" />
         </Picture>
         <Content>
           <h3>Especialista em Embelezar Suas Unhas.</h3>
@@ -58,12 +61,15 @@ export default function Home() {
           </p>
         </Content>
       </Box>
-      <SubTitle>
-        <h3>Trabalhos</h3>
-      </SubTitle>
-      <CarouselContainer>
-        <Carousel images={Images} />
-      </CarouselContainer>
+      <BoxCarousel>
+
+        <SubTitle>
+          <h3>Trabalhos</h3>
+        </SubTitle>
+        <CarouselContainer>
+          <Carousel images={Images} />
+        </CarouselContainer>
+      </BoxCarousel>
     </>
   );
 }

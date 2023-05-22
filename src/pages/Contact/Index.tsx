@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { Container, Form, Label, Localization, SocialMedias } from "./styles";
 
-import facebook from "../../assets/iconFacebook.svg";
-import whatsapp from "../../assets/iconsWhatsapp.svg";
-import instagram from "../../assets/iconInstagram.svg";
+import facebook from "../../assets/icons/iconFacebook.svg";
+import whatsapp from "../../assets/icons/iconsWhatsapp.svg";
+import instagram from "../../assets/icons/iconInstagram.svg";
 import ValidationEmail from "../../helpers/ValidationEmail";
 import PhoneMask from "../../helpers/phoneMask";
+import Modal from "../../components/Modal";
 
 const linkFacebook = "https://www.facebook.com/katia.limagoncalves";
 const linkInstagram = "https://www.instagram.com/kkatia_lima/";
@@ -30,6 +31,17 @@ export default function Contact() {
 
   const url = "http://localhost:3333/register";
 
+  const [isOpen, setIsOpen] = useState(true);
+  const [error, setError] = useState(false)
+
+  const handleOpenModal = () => {
+    setIsOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsOpen(false);
+  };
+
   async function registerUser(user: IForm) {
     try {
       const response = await fetch(url, {
@@ -42,14 +54,27 @@ export default function Contact() {
 
       if (!response.ok) {
         throw new Error("Erro ao enviar sua duvida!");
+        setError(true)
       }
 
       const data = await response.json();
       console.log("Sua Duvida foi enviada com sucesso", data);
-      const message = data.message;
-      alert(message);
+      setError(false)
+
+      setInputsForm({
+        nome: '',
+        email: '',
+        telefone: '',
+        assunto: '',
+        duvida: '',
+      });
+      // alert(message);
     } catch (error) {
       console.error(error);
+      setError(true)
+    } finally {
+      handleOpenModal()
+      setError(false)
     }
   }
 
@@ -116,8 +141,8 @@ export default function Contact() {
         <h2>Entre em Contato</h2>
         <form
           onSubmit={(e) => {
-            e.preventDefault(); // Evita a atualização da página
-            registerUser(inputsForm); // Chamada da função para registrar o usuário
+            e.preventDefault();
+            registerUser(inputsForm)
           }}
         >
           <Label htmlFor="nome">
@@ -212,6 +237,7 @@ export default function Contact() {
           <button type="submit">Enviar</button>
         </form>
       </Form>
+      <Modal isOpen={isOpen} onClose={handleCloseModal} isError={error} />
     </Container>
   );
 }

@@ -59,6 +59,7 @@ export const SubTitle = styled.div`
   font-family: "Libre Baskerville", serif;
   font-weight: 700;
   font-size: 1.5rem;
+  padding: 10px 15px;
   display: flex;
   align-items: "center";
   justify-content: "center";

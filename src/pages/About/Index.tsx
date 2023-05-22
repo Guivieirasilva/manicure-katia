@@ -6,14 +6,12 @@ import {
   PersonAbout,
   SubTitle,
   Text,
-} from "./styles";
-
-import ambiente1 from "../../assets/ambiente1.jpg"
+} from "./styles"
 import ambiente2 from "../../assets/ambiente2.jpg"
-import Person from "../../assets/image-about.png";
-import { CarouselLarge } from "../../components/CarouselLarge/Index";
+import Person from "../../assets/image-about.png"
+import { CarouselLarge } from "../../components/CarouselLarge/Index"
 
-const images = [ambiente1,ambiente2,ambiente2,ambiente1] 
+const images = [ambiente2,ambiente2,ambiente2,ambiente2] 
 
 export default function About() {
   return (
