@@ -31,7 +31,7 @@ export default function Contact() {
 
   const url = "http://localhost:3333/register";
 
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [error, setError] = useState(false)
 
   const handleOpenModal = () => {
