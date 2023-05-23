@@ -19,11 +19,11 @@ export const ModalWrapper = styled.div`
 
 export const ModalContent = styled.div`
   display: flex;
-  /* flex-wrap: wrap; */
+  padding: 20px;
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
-  max-width: 650px;
+  width: '100%';
   margin: 0 auto;
   gap: 15px;
 

@@ -74,7 +74,6 @@ export default function Contact() {
       setError(true)
     } finally {
       handleOpenModal()
-      setError(false)
     }
   }
 
