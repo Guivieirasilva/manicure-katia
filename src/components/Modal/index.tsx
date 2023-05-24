@@ -2,9 +2,9 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 
 interface ModalProps {
-   isOpen: boolean;
-   onClose: () => void;
-   isError: boolean
+  isOpen: boolean;
+  onClose: () => void;
+  isError: boolean
 }
 
 const fadeIn = keyframes`
@@ -49,8 +49,14 @@ const ModalContent = styled.div`
   align-items: center;
   gap: 5px;
   font-size: 18px;
+  > h2 {
+    color: var(--textColor);
+      text-shadow: black 0.1em 0.1em 0.2em;
+  }
   > p {
+      padding: 10px;
       color: var(--textColor);
+      text-align: center;
       text-shadow: black 0.1em 0.1em 0.2em;
     }
   > button {
@@ -74,18 +80,22 @@ const ModalContent = styled.div`
 `
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, isError = false }) => {
-   if (!isOpen) {
-      return null;
-   }
+  if (!isOpen) {
+    return null;
+  }
 
-   return (
-      <ModalWrapper isOpen={isOpen}>
-         <ModalContent>
-            <p>{!isError ? 'Sua dúvida foi enviada com sucesso!' : 'Ocorreu um Erro ao Enviar sua dúvida!'}</p>
-            <button onClick={onClose}>Fechar</button>
-         </ModalContent>
-      </ModalWrapper>
-   );
+  return (
+    <ModalWrapper isOpen={isOpen}>
+      <ModalContent>
+        {/* <p>{!isError ? 'Sua dúvida foi enviada com sucesso!' : 'Ocorreu um Erro ao Enviar sua dúvida!'}</p> */}
+        <h2>Site em Teste!</h2>
+        <p>
+          Site em fase de testes, <br />funcionalidade ainda indisponível!
+        </p>
+        <button onClick={onClose}>Fechar</button>
+      </ModalContent>
+    </ModalWrapper>
+  );
 };
 
 export default Modal;
