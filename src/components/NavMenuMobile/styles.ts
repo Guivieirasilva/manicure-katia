@@ -14,7 +14,7 @@ export const MenuMobile = styled.section<Props>`
   align-items: center;
   color: white;
   background-color: var(--primary);
-  z-index: 20;
+  z-index: 100;
   transition: 0.8s;
   opacity: ${({ isVisible }: any) => (isVisible === true ? 1 : 0)};
   pointer-events: ${({ isVisible }: any) =>

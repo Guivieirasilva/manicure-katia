@@ -125,13 +125,20 @@ export default function Contact() {
       <SocialMedias>
         <h2>Redes Sociais</h2>
         <div>
-          <a href={linkFacebook} target="_blank">
+          <a
+            // href={linkFacebook} target="_blank"
+            onClick={handleOpenModal}
+          >
             <img src={facebook} alt="Rede Social" />{" "}
           </a>
           <a href={linkInstagram} target="_blank">
             <img src={instagram} alt="Rede Social" />{" "}
           </a>
-          <a href={linkWhatsapp} target="_blank">
+          <a
+            // href={linkWhatsapp} target="_blank"
+            onClick={handleOpenModal}
+          >
+
             <img src={whatsapp} alt="Rede Social" />{" "}
           </a>
         </div>

@@ -9,7 +9,7 @@ export const ModalWrapper = styled.div`
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 20px;
-  z-index: 9999;
+  z-index: 99;
 
   @media (max-width: 768px) {
     left: 5%;

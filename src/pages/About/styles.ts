@@ -89,25 +89,35 @@ export const ContainerCarousel = styled.div`
 `;
 
 export const SubTitle = styled.div`
-  font-size: 2.5rem;
   display: flex;
   align-items: "center";
   justify-content: "center";
   > h3 {
     color: var(--textColor);
+    font-family: "Libre Baskerville", serif;
     text-shadow: black 0.1em 0.1em 0.2em;
     display: flex;
+    font-weight: 700;
+    padding: 0 20px;
     margin: 10px auto;
     letter-spacing: 5px;
-    font-weight: 500;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
-  @media screen and (max-width: 660px) {
+  
+    @media screen and (max-width: 900px) {
+    width: 100%;
     > h3 {
-      font: 1.5rem;
+      font-size: 1.5rem;
     }
   }
+
+  @media screen and (max-width: 400px) {
+    > h3 {
+      font-size: 1.3rem;
+    }
+  }
+  
 `;
 
 
