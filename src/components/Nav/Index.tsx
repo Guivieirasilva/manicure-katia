@@ -12,7 +12,7 @@ export default function Nav({ MenuIsVisible }: PropsNavMenu) {
       <BubblyLink to="/">
         <h1
           style={{
-            letterSpacing: "7px",
+            letterSpacing: "6px",
             color: "white",
             animationDelay: "800ms",
           }}

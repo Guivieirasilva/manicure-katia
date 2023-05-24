@@ -92,7 +92,7 @@ export const Box = styled.section`
     margin: 20px auto;
   }
   @media screen and (max-width: 600px) {
-    padding: 50px;
+    padding: 25px 10px;
     margin: 10px;
   }
 `;

@@ -20,8 +20,7 @@ export const MenuMobile = styled.section<Props>`
   pointer-events: ${({ isVisible }: any) =>
     isVisible === true ? "auto" : "none"};
   box-sizing: border-box;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 0 3px;
 
   > div.mobile {
     width: 100%;
