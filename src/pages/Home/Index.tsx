@@ -16,7 +16,8 @@ import {
   SubTitle,
   Text,
 } from "./styles";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import Modal from "../../components/Modal"
 
 const Images = [unhas1, unhas2, unhas3, unhas4];
 
@@ -28,6 +29,18 @@ export default function Home() {
   useEffect(() => {
     console.log(Carousel);
   }, []);
+
+  const [isOpen, setIsOpen] = useState(false);
+  const [error, setError] = useState(false)
+
+  const handleOpenModal = () => {
+    setIsOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsOpen(false);
+  };
+
   return (
     <>
       <Banner>
@@ -37,10 +50,14 @@ export default function Home() {
             De Segunda a Sábado: das 9h até as 20h <br /> Domingo: das 10h as
             17h
           </p>
-          <a href={linkWhatsApp} target="_blank">
-            <button>Agendar</button>
+          <a 
+          // href={linkWhatsApp} target="_blank"
+          >
+            <button onClick={handleOpenModal} >Agendar</button>
           </a>
         </Text>
+        <Modal isOpen={isOpen} onClose={handleCloseModal} isError={error} />
+
 
         <img src={Person} alt="Pessoa sentada no sofá" />
       </Banner>
