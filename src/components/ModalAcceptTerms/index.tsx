@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Cookies from "js-cookie";
 import { ModalWrapper, ModalContent, Message, Button } from "./styles";
+import { Link } from "react-router-dom";
 
 // Componente do modal de cookies
 export const ModalAcceptTerms: React.FC = () => {
@@ -24,7 +25,8 @@ export const ModalAcceptTerms: React.FC = () => {
           aceitar, você concorda com o uso de cookies para personalização de
           conteúdo, análise de tráfego e integração com mídias sociais. Você
           pode ajustar as configurações do seu navegador para bloquear os
-          cookies. Para mais informações, consulte nossa <a href="/Terms">Política de Privacidade</a>{" "}
+          cookies. Para mais informações, consulte nossa{" "}
+          <Link to="/Terms">Política de Privacidade</Link>{" "}
         </Message>
         <Button onClick={handleAccept}>Aceitar</Button>
       </ModalContent>
