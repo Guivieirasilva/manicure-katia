@@ -1,5 +1,6 @@
 import "./styles.css";
 import Menu from "../../assets/icons/menu.svg";
+import { Link } from "react-router-dom";
 
 export interface PropsNavMenu {
   MenuIsVisible?: any;
@@ -8,7 +9,7 @@ export interface PropsNavMenu {
 export default function Nav({ MenuIsVisible }: PropsNavMenu) {
   return (
     <header className="headerNav">
-      <a href="/">
+      <Link to={"/"}>
         <h1
           style={{
             letterSpacing: "6px",
@@ -18,13 +19,11 @@ export default function Nav({ MenuIsVisible }: PropsNavMenu) {
         >
           Katia Manicure
         </h1>
-      </a>
-      <nav
-        className="animate-in navbar"
-      >
-        <a href="About">Sobre</a>
-        <a href="Works">Trabalhos</a>
-        <a href="Contact">Contato</a>
+      </Link>
+      <nav className="animate-in navbar">
+        <Link to={"/About"}>Sobre</Link>
+        <Link to={"/Works"}>Trabalhos</Link>
+        <Link to={"/Contact"}>Contato</Link>
       </nav>
       <button
         className="menu animate-in"

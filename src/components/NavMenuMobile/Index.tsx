@@ -2,6 +2,7 @@ import { MenuMobile } from "./styles";
 
 import IconClose from "../../assets/icons/icon-close.svg";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 interface Props {
   menuIsVisible: any;
@@ -16,14 +17,14 @@ export function NavMenuMobile({ menuIsVisible, setMenuIsVisible }: Props) {
   return (
     <MenuMobile isVisible={menuIsVisible}>
       <div className="mobile">
-        <a href="/">
+        <Link to="/">
           <h1
             onClick={() => setMenuIsVisible(false)}
             style={{ letterSpacing: 6, color: "white" }}
           >
             Katia Manicure
           </h1>
-        </a>
+        </Link>
         <button className="button" onClick={() => setMenuIsVisible(false)}>
           <img
             src={IconClose}
@@ -34,13 +35,13 @@ export function NavMenuMobile({ menuIsVisible, setMenuIsVisible }: Props) {
       <nav className="navMobile">
         <ul>
           <li onClick={() => setMenuIsVisible(false)}>
-            <a href="/About">Sobre</a>
+            <Link to="/About">Sobre</Link>
           </li>
           <li onClick={() => setMenuIsVisible(false)}>
-            <a href="/Works">Trabalhos</a>
+            <Link to="/Works">Trabalhos</Link>
           </li>
           <li onClick={() => setMenuIsVisible(false)}>
-            <a href="/Contact">Contato</a>
+            <Link to="/Contact">Contato</Link>
           </li>
         </ul>
       </nav>

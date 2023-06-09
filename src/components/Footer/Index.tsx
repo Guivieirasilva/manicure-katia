@@ -2,6 +2,7 @@ import { FooterContainer, Nav, SocialMedia } from "./styles";
 import facebook from "../../assets/facebook.svg";
 import whatsapp from "../../assets/whatsapp.svg";
 import instagram from "../../assets/instagram.svg";
+import { Link } from "react-router-dom";
 
 const linkFacebook = "https://www.facebook.com/katia.limagoncalves";
 const linkInstagram = "https://www.instagram.com/kkatia_lima/";
@@ -11,13 +12,13 @@ export default function Footer() {
   return (
     <FooterContainer>
       <Nav>
-        <a href="/">
+        <Link to="/">
           <h2>Katia Manicure</h2>
-        </a>
+        </Link>
         <div>
-          <a href="/About">Sobre</a>
-          <a href="/Works">Trabalhos</a>
-          <a href="/Contact">Contato</a>
+          <Link to="/About">Sobre</Link>
+          <Link to="/Works">Trabalhos</Link>
+          <Link to="/Contact">Contato</Link>
         </div>
       </Nav>
       <SocialMedia>
