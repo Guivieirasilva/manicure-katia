@@ -48,14 +48,13 @@ h1 {
   font-family: "Great Vibes", cursive;
 }
 
-.react-bubbly-transitions__bubbly-link {
+a {
+  color: var(--textColor);
+  text-decoration: none;
   font-family: "Libre Baskerville", serif;
   font-weight: 600;
   letter-spacing: 1px;
   transition-duration: 0.4s;
-}
-.react-bubbly-transitions__bubbly-link:hover {
-  transform: scale(1.1, 1.1);
 }
 
 @keyframes in-keyframes {

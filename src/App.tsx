@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
-import { BubblyContainer } from "react-bubbly-transitions";
 import "keen-slider/keen-slider.min.css";
 
 import About from "./pages/About/Index";
@@ -26,7 +25,6 @@ function App() {
         setMenuIsVisible={setMenuIsVisible}
       />
       <Nav MenuIsVisible={() => setMenuIsVisible(true)} />
-      <BubblyContainer />
       <Routes>
         <Route path="/" element={<Outlet />} />
         <Route index element={<Home />} />

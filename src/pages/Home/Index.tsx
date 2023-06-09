@@ -1,8 +1,9 @@
 import Person from "../../assets/person.png"
-import unhas1 from "../../assets/unha1.jpg"
-import unhas2 from "../../assets/unha2.jpg"
-import unhas3 from "../../assets/unha3.jpg"
-import unhas4 from "../../assets/unha4.jpg"
+import unhas1 from "../../assets/unhas/unhas_1.jpg"
+import unhas2 from "../../assets/unhas/unhas_2.jpg"
+import unhas3 from "../../assets/unhas/unhas_3.jpg"
+import unhas4 from "../../assets/unhas/unhas_4.jpg"
+
 import esmaltes from "../../assets/exemplo.jpg"
 import { Carousel } from "../../components/Carousel/Index"
 

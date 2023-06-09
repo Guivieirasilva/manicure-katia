@@ -77,7 +77,7 @@ export const Text = styled.div`
 
 export const ContainerCarousel = styled.div`
   width: 100%;
-  background-color: #8e38b5;
+  background-color: transparent;
   height: 400px;
   display: flex;
   padding-bottom: 3rem;
@@ -85,7 +85,7 @@ export const ContainerCarousel = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  /* margin-top: 10px; */
 `;
 
 export const SubTitle = styled.div`

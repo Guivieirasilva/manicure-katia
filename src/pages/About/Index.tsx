@@ -7,11 +7,13 @@ import {
   SubTitle,
   Text,
 } from "./styles"
-import ambiente2 from "../../assets/ambiente2.jpg"
+import ambiente1 from "../../assets/ambiente_1.jpg"
+import ambiente from "../../assets/ambiente.jpg"
+
 import Person from "../../assets/image-about.png"
 import { CarouselLarge } from "../../components/CarouselLarge/Index"
 
-const images = [ambiente2, ambiente2, ambiente2, ambiente2]
+const images = [ambiente1, ambiente]
 
 export default function About() {
   return (

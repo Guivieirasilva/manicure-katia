@@ -1,7 +1,9 @@
-import unhas1 from "../../assets/unha1.jpg"
-import unhas2 from "../../assets/unha2.jpg"
-import unhas3 from "../../assets/unha3.jpg"
-import unhas4 from "../../assets/unha4.jpg"
+import unhas1 from "../../assets/unhas/unhas_1.jpg";
+import unhas2 from "../../assets/unhas/unhas_2.jpg";
+import unhas3 from "../../assets/unhas/unhas_3.jpg";
+import unhas4 from "../../assets/unhas/unhas_4.jpg";
+import unhas5 from "../../assets/unhas/unhas_5.jpg";
+import unhas6 from "../../assets/unhas/unhas_6.jpg";
 
 import {
   Box,
@@ -13,7 +15,7 @@ import {
   Text,
 } from "./styles";
 import { Carousel } from "../../components/Carousel/Index";
-const Images = [unhas1, unhas2, unhas3, unhas4];
+const Images = [unhas1, unhas2, unhas3, unhas4, unhas5, unhas6];
 
 export default function Works() {
   return (
@@ -30,10 +32,10 @@ export default function Works() {
       <Techniques>
         <Text>
           <div>
-            <h2>Beleza em suas Mãos {"\n"}<br/>
-            <span>
-              Técnicas Inovadoras para Unhas Incríveis!
-            </span>
+            <h2>
+              Beleza em suas Mãos {"\n"}
+              <br />
+              <span>Técnicas Inovadoras para Unhas Incríveis!</span>
             </h2>
           </div>
           <p>
@@ -48,7 +50,9 @@ export default function Works() {
             deslumbrantes e cheias de estilo!
           </p>
         </Text>
-        <Image><img src={unhas3} alt=" imagem de Unha" /></Image>
+        <Image>
+          <img src={unhas3} alt=" imagem de Unha" />
+        </Image>
       </Techniques>
     </Container>
   );

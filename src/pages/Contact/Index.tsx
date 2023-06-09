@@ -29,7 +29,7 @@ export default function Contact() {
     duvida: "",
   });
 
-  const url = "http://localhost:3333/register";
+  const url = "https://katiamanicure-api.onrender.com/register";
 
   const [isOpen, setIsOpen] = useState(false);
   const [error, setError] = useState(false)
