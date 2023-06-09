@@ -11,12 +11,22 @@ h1 {
   font-size: 2rem;
   text-shadow: black 0.1em 0.1em 0.2em;
 }
-.navbar button {
+nav.navbar{
+  /* display: none; */
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  animation-delay: '800ms';
+  font-weight: 600;
+  padding-right: '2rem';
+  color: '#FFF';
+}
+nav.navbar a {
   text-shadow: black 0.1em 0.1em 0.2em;
 }
 
 @media screen and (max-width: 760px) {
-  .navbar {
+  nav.navbar {
     display: none;
   }
   .menu {

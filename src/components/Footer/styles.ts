@@ -26,15 +26,18 @@ export const Nav = styled.div`
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  > h2 {
-    text-shadow: gray 0.1em 0.1em 0.2em;
+  > a > h2 {
+    text-shadow: black 0.1em 0.1em 0.2em;
     color: (--textColor);
     font-family: "Great Vibes", cursive;
     letter-spacing: 5px;
   }
   > div {
-    > button {
-      text-shadow: gray 0.1em 0.1em 0.2em;
+    display: flex;
+    gap: 1rem;
+    > a {
+      font-size: .9rem;
+        text-shadow: black 0.1em 0.1em 0.2em;
     }
   }
   @media screen and (max-width: 860px) {

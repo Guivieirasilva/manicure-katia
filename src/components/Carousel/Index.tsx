@@ -12,7 +12,7 @@ export function Carousel({ images }: CarouselProps) {
     mode: "snap",
     breakpoints: {
       "(min-width: 300px)": {
-        slides: { perView: 1, spacing: 5 },
+        slides: { perView: 1, spacing: 1 },
         created(s) {
           s.moveToIdx(8, true, animation);
         },
@@ -24,7 +24,7 @@ export function Carousel({ images }: CarouselProps) {
         },
       },
       "(min-width: 660px)": {
-        slides: { perView: 2, spacing: 5 },
+        slides: { perView: 2, spacing: 1 },
         created(s) {
           s.moveToIdx(4, true, animation);
         },
@@ -36,7 +36,7 @@ export function Carousel({ images }: CarouselProps) {
         },
       },
       "(min-width: 1000px)": {
-        slides: { perView: 3, spacing: 10 },
+        slides: { perView: 3, spacing: 1 },
         created(s) {
           s.moveToIdx(4, true, animation);
         },
@@ -57,17 +57,15 @@ export function Carousel({ images }: CarouselProps) {
   return (
     <Container ref={ref} className="keen-slider">
       {images.map((src, inx) => (
-
-      <div key={inx} className="keen-slider__slide number-slide">
-        <img
-          width={"100%"}
-          height={"100%"}
-          src={src}
-          alt="Ilustração do trabalho"
-        />
-      </div>
+        <div key={inx} className="keen-slider__slide number-slide">
+          <img
+            width={"95%"}
+            height={"100%"}
+            src={src}
+            alt="Ilustração do trabalho"
+          />
+        </div>
       ))}
-      
     </Container>
   );
 }

@@ -31,10 +31,8 @@ export const MenuMobile = styled.section<Props>`
     padding: 1rem;
     > button > h1 {
       font-size: 1.7em;
-  text-shadow: gray 0.1em 0.1em 0.2em;
-
+      text-shadow: gray 0.1em 0.1em 0.2em;
     }
-
     > .button {
       background-color: transparent;
       border: none;
@@ -60,9 +58,9 @@ export const MenuMobile = styled.section<Props>`
       flex-direction: column;
       gap: 3rem;
       font-family: "Josefin Sans", sans-serif;
-      > li > button {
+      > li > a {
         font-size: 1.4rem;
-        text-shadow: gray 0.1em 0.1em 0.2em;
+        text-shadow: black 0.1em 0.1em 0.2em;
         transition-duration: 0.5s;
         &:hover,
         &:focus {

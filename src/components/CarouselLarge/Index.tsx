@@ -8,9 +8,7 @@ interface CarouselProps {
 }
 const animation = { duration: 50000, easing: (t: any) => t };
 
-
 export function CarouselLarge({ images }: CarouselProps) {
-
   const [ref] = useKeenSlider<HTMLDivElement>({
     loop: true,
     mode: "snap",
@@ -27,15 +25,14 @@ export function CarouselLarge({ images }: CarouselProps) {
           s.moveToIdx(s.track.details.abs + 3, true, animation);
         },
       },
-      
     },
   });
   return (
     <Container ref={ref} className="keen-slider">
       {images.map((src, inx) => (
-        <div key={inx} className="keen-slider__slide number-slide1">
+        <div key={inx} className="keen-slider__slide number-slide">
           <img
-            width={"100%"}
+            width={"99%"}
             height={"100%"}
             src={src}
             alt="Ilustração do trabalho"

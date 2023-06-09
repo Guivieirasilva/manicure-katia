@@ -3,8 +3,11 @@ import styled from "styled-components";
 export const Container = styled.div`
   max-width: 840px;
   display: flex;
+  border-radius: 1rem;
+  padding: 0.5rem;
   align-items: center;
   height: 100%;
+  background-color: var(--primary);
   max-height: 320px;
 
   @media screen and (max-width: 1024px) and (min-width: 799px) {
@@ -28,8 +31,9 @@ export const Container = styled.div`
 
   [class^="number-slide"],
   [class*=" number-slide"] {
-    background: black;
+    background-color: var(--primary);
     display: flex;
+    border-radius: 1rem;
     align-items: center;
     justify-content: center;
     font-size: 50px;

@@ -1,4 +1,3 @@
-import { BubblyLink } from "react-bubbly-transitions";
 import "./styles.css";
 import Menu from "../../assets/icons/menu.svg";
 
@@ -9,7 +8,7 @@ export interface PropsNavMenu {
 export default function Nav({ MenuIsVisible }: PropsNavMenu) {
   return (
     <header className="headerNav">
-      <BubblyLink to="/">
+      <a href="/">
         <h1
           style={{
             letterSpacing: "6px",
@@ -19,18 +18,13 @@ export default function Nav({ MenuIsVisible }: PropsNavMenu) {
         >
           Katia Manicure
         </h1>
-      </BubblyLink>
+      </a>
       <nav
         className="animate-in navbar"
-        style={{
-          animationDelay: "800ms",
-          fontWeight: 600,
-          paddingRight: "20px",
-        }}
       >
-        <BubblyLink to="About">Sobre</BubblyLink>
-        <BubblyLink to="Works">Trabalhos</BubblyLink>
-        <BubblyLink to="Contact">Contato</BubblyLink>
+        <a href="About">Sobre</a>
+        <a href="Works">Trabalhos</a>
+        <a href="Contact">Contato</a>
       </nav>
       <button
         className="menu animate-in"

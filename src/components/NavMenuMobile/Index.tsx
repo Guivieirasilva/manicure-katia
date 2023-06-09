@@ -2,7 +2,6 @@ import { MenuMobile } from "./styles";
 
 import IconClose from "../../assets/icons/icon-close.svg";
 import { useEffect } from "react";
-import { BubblyLink } from "react-bubbly-transitions";
 
 interface Props {
   menuIsVisible: any;
@@ -17,14 +16,14 @@ export function NavMenuMobile({ menuIsVisible, setMenuIsVisible }: Props) {
   return (
     <MenuMobile isVisible={menuIsVisible}>
       <div className="mobile">
-        <BubblyLink to="/">
+        <a href="/">
           <h1
             onClick={() => setMenuIsVisible(false)}
             style={{ letterSpacing: 6, color: "white" }}
           >
             Katia Manicure
           </h1>
-        </BubblyLink>
+        </a>
         <button className="button" onClick={() => setMenuIsVisible(false)}>
           <img
             src={IconClose}
@@ -35,13 +34,13 @@ export function NavMenuMobile({ menuIsVisible, setMenuIsVisible }: Props) {
       <nav className="navMobile">
         <ul>
           <li onClick={() => setMenuIsVisible(false)}>
-            <BubblyLink to="/About">Sobre</BubblyLink>
+            <a href="/About">Sobre</a>
           </li>
           <li onClick={() => setMenuIsVisible(false)}>
-            <BubblyLink to="/Works">Trabalhos</BubblyLink>
+            <a href="/Works">Trabalhos</a>
           </li>
           <li onClick={() => setMenuIsVisible(false)}>
-            <BubblyLink to="/Contact">Contato</BubblyLink>
+            <a href="/Contact">Contato</a>
           </li>
         </ul>
       </nav>
