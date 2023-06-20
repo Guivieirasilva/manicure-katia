@@ -1,16 +1,17 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Container, Form, Label, Localization, SocialMedias } from "./styles";
 
 import facebook from "../../assets/icons/iconFacebook.svg";
 import whatsapp from "../../assets/icons/iconsWhatsapp.svg";
 import instagram from "../../assets/icons/iconInstagram.svg";
-import ValidationEmail from "../../helpers/ValidationEmail";
 import PhoneMask from "../../helpers/phoneMask";
 import Modal from "../../components/Modal";
+import { Skeleton } from "../../components/Skelleton";
 
 const linkFacebook = "https://www.facebook.com/katia.limagoncalves";
 const linkInstagram = "https://www.instagram.com/kkatia_lima/";
-const linkWhatsapp = "https://www.whatsapp.com/";
+const linkWhatsapp =
+  "https://api.whatsapp.com/send?phone=5511940059743&text=Ol%C3%A1!%20Como%20vai%20voc%C3%AA?%20Vi%20seu%20trabalho%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio.";
 
 interface IForm {
   nome: string;
@@ -31,8 +32,9 @@ export default function Contact() {
 
   const url = "https://katiamanicure-api.onrender.com/register";
 
-  const [isOpen, setIsOpen] = useState(false);
-  const [error, setError] = useState(false)
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [error, setError] = useState<boolean>(false);
+  const [isLoading, setIsloading] = useState<boolean>(false);
 
   const handleOpenModal = () => {
     setIsOpen(true);
@@ -44,6 +46,7 @@ export default function Contact() {
 
   async function registerUser(user: IForm) {
     try {
+      setIsloading(true);
       const response = await fetch(url, {
         method: "POST",
         headers: {
@@ -54,61 +57,28 @@ export default function Contact() {
 
       if (!response.ok) {
         throw new Error("Erro ao enviar sua duvida!");
-        setError(true)
+        setError(true);
       }
 
       const data = await response.json();
       console.log("Sua Duvida foi enviada com sucesso", data);
-      setError(false)
+      setError(false);
 
       setInputsForm({
-        nome: '',
-        email: '',
-        telefone: '',
-        assunto: '',
-        duvida: '',
+        nome: "",
+        email: "",
+        telefone: "",
+        assunto: "",
+        duvida: "",
       });
       // alert(message);
     } catch (error) {
       console.error(error);
-      setError(true)
+      setError(true);
     } finally {
-      handleOpenModal()
+      handleOpenModal();
+      setIsloading(false);
     }
-  }
-
-  function validateForm(inputsForm: IForm) {
-    const { nome, email, telefone, assunto, duvida } = inputsForm;
-    const errors: Partial<IForm> = {};
-
-    if (nome.trim() === "") {
-      errors.nome = "O campo nome é obrigatório.";
-    }
-
-    if (email.trim() === "") {
-      errors.email = "O campo email é obrigatório.";
-    } else if (!isValidEmail(email)) {
-      errors.email = "Digite um email válido.";
-    }
-
-    if (telefone.trim() === "") {
-      errors.telefone = "O campo telefone é obrigatório.";
-    }
-
-    if (assunto.trim() === "") {
-      errors.assunto = "O campo assunto é obrigatório.";
-    }
-
-    if (duvida.trim() === "") {
-      errors.duvida = "O campo dúvida é obrigatório.";
-    }
-
-    return errors;
-  }
-
-  function isValidEmail(email: string) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
   }
 
   return (
@@ -125,124 +95,155 @@ export default function Contact() {
       <SocialMedias>
         <h2>Redes Sociais</h2>
         <div>
-          <a
-            // href={linkFacebook} target="_blank"
-            onClick={handleOpenModal}
-          >
+          <a href={linkFacebook} target="_blank" onClick={handleOpenModal}>
             <img src={facebook} alt="Rede Social" />{" "}
           </a>
           <a href={linkInstagram} target="_blank">
             <img src={instagram} alt="Rede Social" />{" "}
           </a>
-          <a
-            // href={linkWhatsapp} target="_blank"
-            onClick={handleOpenModal}
-          >
-
+          <a href={linkWhatsapp} target="_blank" onClick={handleOpenModal}>
             <img src={whatsapp} alt="Rede Social" />{" "}
           </a>
         </div>
       </SocialMedias>
+
       <Form>
         <h2>Entre em Contato</h2>
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            registerUser(inputsForm)
+            registerUser(inputsForm);
           }}
         >
           <Label htmlFor="nome">
-            Nome Completo:
-            <input
-              value={inputsForm.nome}
-              onChange={(e) =>
-                setInputsForm({
-                  ...inputsForm,
-                  nome: e.target.value,
-                })
-              }
-              placeholder=" Nome Completo"
-              type="text"
-              id="nome"
-              name="nome"
-              required
-            />
+            {isLoading ? (
+              <Skeleton height={"40px"} width={"95%"} />
+            ) : (
+              <>
+                Nome Completo:
+                <input
+                  value={inputsForm.nome}
+                  onChange={(e) =>
+                    setInputsForm({
+                      ...inputsForm,
+                      nome: e.target.value,
+                    })
+                  }
+                  placeholder=" Nome Completo"
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  required
+                />
+              </>
+            )}
           </Label>
 
           <Label htmlFor="email">
-            E-mail:
-            <input
-              value={inputsForm.email}
-              onChange={(e) =>
-                setInputsForm({
-                  ...inputsForm,
-                  email: e.target.value,
-                })
-              }
-              type="email"
-              placeholder=" Digite o Email"
-              id="email"
-              name="email"
-              required
-            />
+            {isLoading ? (
+              <Skeleton height={"40px"} width={"95%"} />
+            ) : (
+              <>
+                E-mail:
+                <input
+                  value={inputsForm.email}
+                  onChange={(e) =>
+                    setInputsForm({
+                      ...inputsForm,
+                      email: e.target.value,
+                    })
+                  }
+                  type="email"
+                  placeholder=" Digite o Email"
+                  id="email"
+                  name="email"
+                  required
+                />
+              </>
+            )}
           </Label>
 
           <Label htmlFor="telefone">
-            Telefone:
-            <input
-              value={PhoneMask(inputsForm.telefone)}
-              onChange={(e) =>
-                setInputsForm({
-                  ...inputsForm,
-                  telefone: e.target.value,
-                })
-              }
-              placeholder=" (11) 99999-9999"
-              type="tel"
-              id="telefone"
-              name="telefone"
-              required
-            />
+            {isLoading ? (
+              <Skeleton height={"40px"} width={"95%"} />
+            ) : (
+              <>
+                Telefone:
+                <input
+                  value={PhoneMask(inputsForm.telefone)}
+                  onChange={(e) =>
+                    setInputsForm({
+                      ...inputsForm,
+                      telefone: e.target.value,
+                    })
+                  }
+                  placeholder=" (11) 99999-9999"
+                  type="tel"
+                  id="telefone"
+                  name="telefone"
+                  required
+                />
+              </>
+            )}
           </Label>
 
           <Label htmlFor="assunto">
-            Assunto:
-            <input
-              value={inputsForm.assunto}
-              onChange={(e) =>
-                setInputsForm({
-                  ...inputsForm,
-                  assunto: e.target.value,
-                })
-              }
-              type="text"
-              placeholder=" Digite o assunto"
-              id="assunto"
-              name="assunto"
-              required
-            />
+            {isLoading ? (
+              <Skeleton height={"40px"} width={"95%"} />
+            ) : (
+              <>
+                Assunto:
+                <input
+                  value={inputsForm.assunto}
+                  onChange={(e) =>
+                    setInputsForm({
+                      ...inputsForm,
+                      assunto: e.target.value,
+                    })
+                  }
+                  type="text"
+                  placeholder=" Digite o assunto"
+                  id="assunto"
+                  name="assunto"
+                  required
+                />
+              </>
+            )}
           </Label>
 
           <Label htmlFor="duvida">
-            Dúvida:
-            <textarea
-              value={inputsForm.duvida}
-              onChange={(e) =>
-                setInputsForm({
-                  ...inputsForm,
-                  duvida: e.target.value,
-                })
-              }
-              id="duvida"
-              placeholder=" Digite sua duvida"
-              name="duvida"
-              required
-            ></textarea>
+            {isLoading ? (
+              <Skeleton height={"120px"} width={"95%"} />
+            ) : (
+              <>
+                Dúvida:
+                <textarea
+                  value={inputsForm.duvida}
+                  onChange={(e) =>
+                    setInputsForm({
+                      ...inputsForm,
+                      duvida: e.target.value,
+                    })
+                  }
+                  id="duvida"
+                  placeholder=" Digite sua duvida"
+                  name="duvida"
+                  required
+                ></textarea>
+              </>
+            )}
           </Label>
 
-          <button type="submit">Enviar</button>
+          {isLoading ? (
+            <Skeleton height={"40px"} width={"150px"} />
+          ) : (
+            <button disabled={isLoading} type="submit">
+              Enviar
+            </button>
+          )}
         </form>
       </Form>
+
       <Modal isOpen={isOpen} onClose={handleCloseModal} isError={error} />
     </Container>
   );
