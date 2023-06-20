@@ -6,7 +6,8 @@ import { Link } from "react-router-dom";
 
 const linkFacebook = "https://www.facebook.com/katia.limagoncalves";
 const linkInstagram = "https://www.instagram.com/kkatia_lima/";
-const linkWhatsapp = "https://www.whatsapp.com/";
+const linkWhatsapp =
+  "https://api.whatsapp.com/send?phone=5511940059743&text=Ol%C3%A1!%20Como%20vai%20voc%C3%AA?%20Vi%20seu%20trabalho%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio.";
 
 export default function Footer() {
   return (
